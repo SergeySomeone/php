@@ -1,4 +1,50 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 200px;
+    background-color:#a3b1ff;
+    background-size:cover;
+    background-position: center;
+    font-style: italic;
+    font-size: 5cm ;
+ }
+
+ article {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: url(./images/BckGrnd.jpg) bottom no-repeat;
+    background-size:cover;
+    background-position:center;
+ }
+
 .game-card {
     height: 100vh;
     font-family: 'Open Sans', monospace;
+}
+
+.card-header {
+    background: linear-gradient(to bottom, #7c8ff0, #c1c9f0) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-footer {
+    background: linear-gradient(to top, #7c8ff0, #c1c9f0) ;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.card-body {
+    background: radial-gradient(white, #c1c9f0) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#btnLess, #btnOver {
+    background: radial-gradient(white, #667fff);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#btnEqual {
+  background: linear-gradient(to bottom, #1704c4 20%, #E4E4D8 50%, #1704c4 80%);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
