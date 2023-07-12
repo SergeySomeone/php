@@ -104,22 +104,19 @@ const personGenerator = {
     randomValue: function (json) {
         const obj = JSON.parse(json);
         const prop = `id_${this.randomIntNumber(obj.count, 1)}`; 
-        // this = personGenerator
-        
+               
         return obj.list[prop];
     },
 
     randomGender: function() {
-        /* Генерация гендера*/
-
+       
         gender = (this.randomIntNumber(1)) ? this.GENDER_MALE : this.GENDER_FEMALE;
 
         return gender;
     },
 
     randomFirstName: function() {
-        /* Генерация имени с привязкой по гендеру */
-
+    
         let firstNameJson = (gender == this.GENDER_MALE) ? this.firstNameMaleJson : this.firstNameFemaleJson;
 
         return this.randomValue(firstNameJson);
@@ -127,27 +124,21 @@ const personGenerator = {
     },
 
     randomSurname: function() {
-        /* Генерация фамилии с привязкой по гендеру */
-
+     
         let surNameJson = (gender == this.GENDER_MALE) ? this.randomValue(this.surnameJson) : `${this.randomValue(this.surnameJson)}a`;
 
         return surNameJson;
     },
 
     randomPatronymic: function(){
-        /* Генерация отчества с привязкой по гендеру */
-
+     
         let randomPatronymic = (gender == this.GENDER_MALE) ? `${this.randomValue(this.patronymicJson)}ич` : `${this.randomValue(this.patronymicJson)}на`;
         
         return randomPatronymic;   
     },   
            
     randomDate: function() {
-        /* 
-            Генерация даты рождения с отображением месяца прописью 
-            Версия ментора
-        */
-
+      
         let startDate = new Date(1950, 0, 1);
         let endDate = new Date(2005, 11, 31);
         let date = new Date( + startDate + Math.random() * (endDate - startDate))
@@ -161,8 +152,7 @@ const personGenerator = {
     },
 
     randomProfession: function() {
-        /* Генерация професси с привязкой по гендеру */
-        
+             
         let professionName = (gender == this.GENDER_MALE) ? this.professionMaleName : this.professionFemaleName;
 
         return this.randomValue(professionName);
@@ -170,8 +160,7 @@ const personGenerator = {
     },
 
     genderPhoto: function() {
-        /* Генерация фото с привязкой по гендеру */
-
+    
         let srcPhoto = (gender == this.GENDER_MALE) ? "man" : "woman";
 
         return srcPhoto;
