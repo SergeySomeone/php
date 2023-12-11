@@ -7,3 +7,19 @@
     text-align: end;
     font-size: x-large;
 }
+
+.btn-outline-white {
+    background-color: blue;
+    font-size: large;
+    color: aliceblue;
+}
+
+.btn-outline-danger {
+    background-color: rgb(255, 0, 0);
+    font-size: large;
+    color: aliceblue;
+}
+
+.card-body {
+    background-color: black;
+}

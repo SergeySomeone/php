@@ -34,65 +34,65 @@ document.querySelector('#btn_0').addEventListener('click', function () {
     inputWindow.value += '0';
 });
 
-
 document.querySelector('#btn_sum').addEventListener('click', function () {
     lastOperand = parseInt(inputWindow.value);
     operation = 'sum';
-    inputWindow.value = ''
-
-})
-
-document.querySelector('#btn_def').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
-    operation = 'def';
     inputWindow.value = '';
-
-})
-
+});
+document.querySelector('#btn_min').addEventListener('click', function () {
+    lastOperand = parseInt(inputWindow.value);
+    operation = 'min';
+    inputWindow.value = '';
+});
 document.querySelector('#btn_by').addEventListener('click', function () {
     lastOperand = parseInt(inputWindow.value);
     operation = 'by';
     inputWindow.value = '';
-
-})
-
+});
 document.querySelector('#btn_dev').addEventListener('click', function () {
     lastOperand = parseInt(inputWindow.value);
     operation = 'dev';
     inputWindow.value = '';
+});
+document.querySelector('#btn_sqrt').addEventListener('click', function () {
+    lastOperand = parseInt(inputWindow.value);
+    operation = 'sqrt';
+    inputWindow.value = '';
+});
 
-})
 
-
-document.querySelector('#btn_calc').addEventListener('click', function () {
-    if (operation === 'sum'){
-        const result = lastOperand + parseInt(inputWindow.value);
-        operation = null;
-        lastOperand = 0;
-       inputWindow.value = result;
-    }
-    if (operation === 'def'){
-        const result = lastOperand - parseInt(inputWindow.value);
-        operation = null;
-        lastOperand = 0;
-        inputWindow.value = result;
-    }
-    if (operation === 'by'){
-        const result = lastOperand * parseInt(inputWindow.value);
-        operation = null;
-        lastOperand = 0;
-        inputWindow.value = result;
-    }
-    if (operation === 'dev'){
-        const result = lastOperand / parseInt(inputWindow.value);
-        operation = null;
-        lastOperand = 0;
-        inputWindow.value = result;
-    }
-})
+document.querySelector('#btn_eq').addEventListener('click', function () {
+ if (operation === 'sum') {
+    const result = parseInt(lastOperand) + parseInt(inputWindow.value);
+    lastOperand = 0;
+    operation = null;
+    inputWindow.value = result;
+ } else if (operation === 'min') {
+    const result = parseInt(lastOperand) - parseInt(inputWindow.value);
+    lastOperand = 0;
+    operation = null;
+    inputWindow.value = result;
+ } else if (operation === 'by') {
+    const result = parseInt(lastOperand) * parseInt(inputWindow.value);
+    lastOperand = 0;
+    operation = null;
+    inputWindow.value = result;
+ } else if (operation === 'dev') {
+    const result = parseInt(lastOperand) / parseInt(inputWindow.value);
+    lastOperand = 0;
+    operation = null;
+    inputWindow.value = result;
+ }});
+document.querySelector('#btn_sqrt').addEventListener('click', function () {
+if (operation === 'sqrt') {
+    const result = Math.sqrt(parseInt(lastOperand));
+    lastOperand = 0;
+    operation = null;
+    inputWindow.value = result;
+}});
 
 document.querySelector('#btn_clr').addEventListener('click', function () {
     lastOperand = 0;
     operation = null;
     inputWindow.value = '';
-})
+});
