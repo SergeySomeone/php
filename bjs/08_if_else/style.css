@@ -1,24 +1,3 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    height: 200px;
-    background-color:#a3b1ff;
-    background-size:cover;
-    background-position: center;
-    font-style: italic;
-    font-size: 5cm ;
- }
-
- article {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    background: url(./images/BckGrnd.jpg) bottom no-repeat;
-    background-size:cover;
-    background-position:center;
- }
-
 .game-card {
     height: 100vh;
     font-family: 'Open Sans', monospace;
